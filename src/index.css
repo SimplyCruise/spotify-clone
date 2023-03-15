@@ -1,11 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .layout{
-  height:93.5vh;
+  height:auto;
   width:100%;
   display: flex;
   position: relative;
@@ -14,16 +14,209 @@ body {
 }
 
 .Content{
-  width: calc(100% - 200px);
+  width:auto;
+  margin-left: 200px;
+  height: auto;
   padding:20px;
-  background-color: rgb(234, 231, 228);
+  background-image:linear-gradient(to bottom right, rgb(229, 238, 255), rgb(206, 215, 255) );
+  display: flex;
+justify-content: space-between;
+}
+
+.playbar{
+  width: 700px;
+  position: fixed;
+  bottom: 3px;
+  height: 100px;
+  left: 245px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+
+
+.i-2{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 25px;
+  width:300px;
+}
+
+.heart{
+  height:20px;
+  width: 20px;
+}
+
+.pause{
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}
+
+
+.music{
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.foward{
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+
+.rewind{
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+
+.refresh{
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+.volume{
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+.icons{
+  display: flex;
+  justify-content:flex-start;
+  gap: 60px;
+}
+
+.i-1{
+  width: 200px;
+  display: flex;
+  justify-content:center;
+  gap: 20px;
+  align-items: center;
+}
+
+.i-3{
+  width: 200px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.home{
+  display: flex;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  padding: 20px;
+  margin-bottom: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content:flex-start;
+}
+
+.trends{
+    display: flex;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+  justify-content:flex-start;
+}
+
+.liked{
+  display: flex;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content:flex-start;
+}
+
+.icon{
+  height: 20px;
+  width: 20px;
+}
+
+.home:hover{
+  background-color: rgb(16, 16, 33);
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+}
+
+.home:active{
+    background-color: rgb(16, 16, 33);
+    height: 40px;
+    border-radius: 20px;
+    color: white;
+}
+
+.trends:hover{
+   background-color: rgb(16, 16, 33);
+  height: 40px;
+  border-radius: 20px;
+  color: white;
+}
+
+.liked:hover{
+   background-color: rgb(16, 16, 33);
+  height: 40px;
+  border-radius: 20px;
+  color: white;
+}
+
+
+
+
+.main{
+  width: 70%;
+}
+
+.side{
+  width: 30%;
 }
 
 .img-div{
-  width: 65%;
-  margin-left: 21px;
-  display: flex;
-  justify-content: space-between;
+  width: 400px;
+  height: auto;
+  outline: none;
+  align-items: end;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 0px 10px 20px;
+  font-size: 16px;
+  align-items: end;
+  margin-left: 300px;
+  background-color: white;
+
+}
+
+.i-search{
+  height: 20px;
+  width: 20px;
+}
+
+.search{
+  outline: none;
+  border: none;
+  padding-left: 15px;
 }
 
 img{
@@ -36,6 +229,7 @@ h2{
   margin-top: 60px;
   margin-left: 2px;
   font-weight: 900;
+  margin-bottom: 30px;
 }
 
 .back{
@@ -53,13 +247,15 @@ h2{
 }
 
 .Sidebar{
+  position: fixed;
   width: 200px;
-  height: auto;
+  height:100vh;
   background-color: rgb(255, 255, 255);
   padding: 20px;
   color: black;
   display:flex;
-   flex-direction: row;
+   flex-direction:column;
+   bottom: 100px;
    justify-content: flex-start;
    align-items:center;
   /* margin: 2rem 0;*/
@@ -72,7 +268,7 @@ h2{
 }
 
 .sidebar-nav{
-  
+margin-top: 200px;
 height: 100%;
 width: 100%;
 display: flex;
@@ -89,7 +285,6 @@ align-items:flex-start;
    font-size:16px;
    line-height: 20px;
    font-weight: 500;
-   padding-left: 15px;
    gap: 20px;
 }
 
@@ -101,7 +296,6 @@ align-items:flex-start;
    font-size:16px;
    line-height: 20px;
    font-weight: 500;
-   padding-left: 15px;
 }
 
 .col-nav{
@@ -115,18 +309,8 @@ align-items:flex-start;
    padding-left: 15px;
 }
 
-li{
-  list-style: none;
-  cursor: pointer;
-  color:rgb(0, 3, 22) ;
-}
 
-li:hover{
-  background-color: rgb(0, 3, 22);
-  height: 40px;
-  border-radius: 10px;
-  color: white;
-}
+
 
 .Topbar{
   position: absolute;
@@ -139,19 +323,11 @@ li:hover{
 }
 
 .search{
-  width: 400px;
-  height: 30px;
-  outline: none;
-  align-self: center;
-  border: none;
-  border-radius: 20px;
-  padding-left: 10px;
-  font-size: 16px;
-  align-items: end;
+  
 }
 
 .Playbar{
-  position:absolute;
+  position:fixed;
   bottom:-40px;
   left: 200px;
   height: 70px;
@@ -163,7 +339,7 @@ li:hover{
 
 .trend{
  margin-left: 21px;
- width: 65%;
+ width: 90%;
 }
 
 .trending{
@@ -181,3 +357,124 @@ li:hover{
   gap: 9px;
 }
 
+.side{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.shortcut{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+h4{
+  font-weight: 700;
+}
+
+.buttons{
+  display: flex;
+  flex-direction:row;
+  justify-content:flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.s-btn{
+  outline: none;
+  border: 1px solid gray;
+  background-color: white;
+  padding: 8px;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 120px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.emojis{
+  height: 20px;
+  width: 20px;
+}
+
+.artists{
+  margin-bottom: 30px;
+}
+
+.details{
+  height: auto;
+  width: 250px;
+  background-color: transparent;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+  cursor: pointer;
+
+}
+
+
+h5{
+  font-weight: 900;
+  font-size: 16px;
+  margin: 0px;
+}
+
+h6{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.p-img{
+  height: 50px;
+  width: 50px;
+  border-radius:50%;
+}
+
+.t-trend{
+ display: flex;
+}
+
+.trend-img{
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+}
+
+.card{
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.d-img{
+  width:100%;
+  height: 250px;
+}
+.singer{
+ font-size: 18px;
+ font-weight: 900;
+ padding-top: 20px;
+}
+
+.album{
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.playlist{
+  margin-left: 22px;
+}
+
+
+.tr:hover{
+  background-color: white;
+  color: rgb(16, 16, 33);
+  cursor: pointer;
+ border-radius: 25px !important;
+}
