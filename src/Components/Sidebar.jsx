@@ -1,8 +1,6 @@
 import React from 'react';
-import { useState } from 'react';
 import img from '../img/burna.jpeg'
-import { HiOutlineHashtag, HiOutlineHeart, HiOutlineHome, HiOutlineMenu, HiOutlinePhotograph,} from 'react-icons/hi';
-import { RiCloseLine } from 'react-icons/ri';
+import { HiOutlineHashtag, HiOutlineHeart, HiOutlineHome, HiOutlinePhotograph,} from 'react-icons/hi';
 //import logo from '../../img/spotify-white.png'
 
 const Sidebar = ({ children }) => (
